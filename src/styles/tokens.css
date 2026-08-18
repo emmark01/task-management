@@ -1,3 +1,37 @@
 :root {
-  color-scheme: light;
+  --forest-950: #13241c;
+  --forest-900: #1f3a2e;
+  --forest-800: #2a4d3c;
+  --forest-700: #3d6b4f;
+  --forest-100: #dce8e0;
+  --cream-50: #fbf8f1;
+  --cream-100: #f6f1e7;
+  --cream-200: #efe6d4;
+  --cream-300: #e3d6bb;
+  --ink-900: #1a1814;
+  --ink-700: #3f3a32;
+  --ink-500: #6f675c;
+  --ink-400: #8d8477;
+  --ink-200: #cfc6b6;
+  --rust-600: #c0562a;
+  --rust-500: #d46a38;
+  --rust-100: #f6dccb;
+  --gold-500: #c4a35a;
+  --gold-100: #f3e7c6;
+  --sky-600: #3d6e8c;
+  --sky-100: #d5e6ef;
+  --rose-600: #a6454a;
+  --rose-100: #f3d4d5;
+  --white: #fffdf8;
+  --shadow-sm: 0 1px 2px rgba(26, 24, 20, 0.06);
+  --shadow-md: 0 8px 24px rgba(31, 58, 46, 0.08);
+  --shadow-lg: 0 18px 40px rgba(19, 36, 28, 0.14);
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-pill: 999px;
+  --font-display: "Fraunces", "Times New Roman", serif;
+  --font-ui: "Figtree", "Segoe UI", sans-serif;
+  --sidebar-width: 260px;
+  --header-height: 72px;
 }
