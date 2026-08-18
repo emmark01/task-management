@@ -1,0 +1,28 @@
+.nw-project-card {
+  display: grid;
+  grid-template-columns: 10px 1fr;
+  background: var(--white);
+  border: 1px solid var(--cream-300);
+  border-radius: 18px;
+  overflow: hidden;
+  min-height: 210px;
+}
+
+.nw-project-card-body {
+  display: grid;
+  gap: 10px;
+  padding: 16px;
+}
+
+.nw-project-card h3 {
+  font-family: var(--font-display);
+  font-size: 26px;
+}
+
+.nw-project-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--ink-500);
+  font-size: 13px;
+}
