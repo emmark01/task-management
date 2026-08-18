@@ -1,0 +1,44 @@
+.nw-search-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(19, 36, 28, 0.4);
+  display: grid;
+  justify-items: center;
+  padding-top: 12vh;
+  z-index: 30;
+}
+
+.nw-search {
+  width: min(640px, calc(100% - 32px));
+  background: var(--cream-50);
+  border-radius: 20px;
+  box-shadow: var(--shadow-lg);
+  padding: 16px;
+}
+
+.nw-search-bar {
+  display: grid;
+  grid-template-columns: 24px 1fr 40px;
+  gap: 8px;
+  align-items: center;
+}
+
+.nw-search ul {
+  list-style: none;
+  margin: 12px 0 0;
+  padding: 0;
+  display: grid;
+  gap: 8px;
+}
+
+.nw-search li {
+  display: grid;
+  padding: 10px 12px;
+  border-radius: 12px;
+  background: var(--white);
+}
+
+.nw-search span {
+  color: var(--ink-500);
+  font-size: 13px;
+}
