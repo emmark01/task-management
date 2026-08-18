@@ -1,0 +1,36 @@
+.nw-stat {
+  background: var(--white);
+  border: 1px solid var(--cream-300);
+  border-radius: 18px;
+  padding: 18px;
+  display: grid;
+  gap: 6px;
+}
+
+.nw-stat-icon {
+  width: 36px;
+  height: 36px;
+  display: grid;
+  place-items: center;
+  background: var(--cream-200);
+  border-radius: 10px;
+  color: var(--forest-800);
+}
+
+.nw-stat span {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-500);
+}
+
+.nw-stat strong {
+  font-family: var(--font-display);
+  font-size: 34px;
+}
+
+.nw-stat p {
+  color: var(--ink-500);
+  font-size: 13px;
+}
