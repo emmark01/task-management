@@ -15,18 +15,19 @@ interface TaskDetailDrawerProps {
 }
 
 export function TaskDetailDrawer({ task, onClose }: TaskDetailDrawerProps) {
-  const { users, projects, updateTask, moveTask } = useTasks();
-  if (!task) return null;
+  const { users, projects, tasks, currentUser, updateTask, moveTask } = useTasks();
+  const live = tasks.find((item) => item.id === task?.id);
+  if (!task || !live) return null;
 
-  const project = projects.find((item) => item.id === task.projectId);
-  const assignees = users.filter((user) => task.assigneeIds.includes(user.id));
+  const project = projects.find((item) => item.id === live.projectId);
+  const assignees = users.filter((user) => live.assigneeIds.includes(user.id));
 
   return (
     <div className="nw-drawer-backdrop" onClick={onClose} role="presentation">
       <aside
         className="nw-drawer"
         role="dialog"
-        aria-label={task.title}
+        aria-label={live.title}
         onClick={(event) => event.stopPropagation()}
       >
         <header>
@@ -35,14 +36,14 @@ export function TaskDetailDrawer({ task, onClose }: TaskDetailDrawerProps) {
             <Icons.close />
           </IconButton>
         </header>
-        <h2>{task.title}</h2>
-        <p>{task.description}</p>
+        <h2>{live.title}</h2>
+        <p>{live.description}</p>
         <div className="nw-drawer-grid">
           <Select
             label="Status"
-            value={task.status}
+            value={live.status}
             onChange={(event) =>
-              moveTask(task.id, event.target.value as TaskStatus)
+              moveTask(live.id, event.target.value as TaskStatus)
             }
           >
             <option value="backlog">Backlog</option>
@@ -53,15 +54,15 @@ export function TaskDetailDrawer({ task, onClose }: TaskDetailDrawerProps) {
           </Select>
           <div>
             <span className="nw-field-label">Priority</span>
-            <PriorityBadge priority={task.priority} />
+            <PriorityBadge priority={live.priority} />
           </div>
           <div>
             <span className="nw-field-label">Due</span>
-            <strong>{formatDate(task.dueDate)}</strong>
+            <strong>{formatDate(live.dueDate)}</strong>
           </div>
           <div>
             <span className="nw-field-label">Estimate</span>
-            <strong>{task.estimateHours}h</strong>
+            <strong>{live.estimateHours}h</strong>
           </div>
         </div>
         <div>
@@ -69,7 +70,7 @@ export function TaskDetailDrawer({ task, onClose }: TaskDetailDrawerProps) {
           <AvatarGroup users={assignees} max={5} />
         </div>
         <div className="nw-tags">
-          {task.tags.map((tag) => (
+          {live.tags.map((tag) => (
             <Badge key={tag} tone="forest">
               {tag}
             </Badge>
@@ -77,10 +78,10 @@ export function TaskDetailDrawer({ task, onClose }: TaskDetailDrawerProps) {
         </div>
         <section>
           <h3>Comments</h3>
-          {task.comments.length === 0 ? (
+          {live.comments.length === 0 ? (
             <p className="nw-muted">No comments yet.</p>
           ) : (
-            task.comments.map((comment) => {
+            live.comments.map((comment) => {
               const author = users.find((user) => user.id === comment.authorId);
               return (
                 <div key={comment.id} className="nw-comment">
@@ -105,12 +106,12 @@ export function TaskDetailDrawer({ task, onClose }: TaskDetailDrawerProps) {
                 event.preventDefault();
                 const body = event.currentTarget.value.trim();
                 if (!body) return;
-                updateTask(task.id, {
+                updateTask(live.id, {
                   comments: [
-                    ...task.comments,
+                    ...live.comments,
                     {
                       id: `c-${Date.now()}`,
-                      authorId: users[0].id,
+                      authorId: currentUser.id,
                       body,
                       createdAt: new Date().toISOString(),
                     },
