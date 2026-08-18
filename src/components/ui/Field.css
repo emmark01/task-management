@@ -29,3 +29,15 @@
   min-height: 96px;
   resize: vertical;
 }
+
+.nw-form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+@media (max-width: 640px) {
+  .nw-form-row {
+    grid-template-columns: 1fr;
+  }
+}
