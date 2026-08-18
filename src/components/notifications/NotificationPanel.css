@@ -1,0 +1,51 @@
+.nw-notes {
+  position: absolute;
+  right: 0;
+  top: 48px;
+  width: 320px;
+  background: var(--white);
+  border: 1px solid var(--cream-300);
+  border-radius: 16px;
+  box-shadow: var(--shadow-md);
+  padding: 12px;
+  z-index: 20;
+}
+
+.nw-notes header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.nw-notes header button,
+.nw-notes li button {
+  background: none;
+  border: 0;
+  padding: 0;
+  text-align: left;
+}
+
+.nw-notes ul {
+  list-style: none;
+  margin: 0 0 12px;
+  padding: 0;
+  display: grid;
+  gap: 8px;
+}
+
+.nw-notes li button {
+  width: 100%;
+  display: grid;
+  gap: 2px;
+  padding: 8px;
+  border-radius: 10px;
+}
+
+.nw-notes li:not(.is-read) button {
+  background: var(--gold-100);
+}
+
+.nw-notes small {
+  color: var(--ink-400);
+}
