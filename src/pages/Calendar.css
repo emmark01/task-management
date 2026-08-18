@@ -1,0 +1,43 @@
+.nw-cal-head,
+.nw-cal-grid {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+}
+
+.nw-cal-head {
+  margin-bottom: 8px;
+  color: var(--ink-500);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.nw-cal-grid {
+  gap: 8px;
+}
+
+.nw-cal-cell {
+  min-height: 110px;
+  background: var(--white);
+  border: 1px solid var(--cream-300);
+  border-radius: 12px;
+  padding: 8px;
+  display: grid;
+  align-content: start;
+  gap: 6px;
+}
+
+.nw-cal-cell.is-muted {
+  opacity: 0.45;
+}
+
+.nw-cal-cell button {
+  background: var(--cream-100);
+  border: 0;
+  border-left: 3px solid var(--forest-700);
+  text-align: left;
+  font-size: 12px;
+  padding: 6px 8px;
+  border-radius: 6px;
+}
