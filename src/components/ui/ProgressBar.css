@@ -1,0 +1,13 @@
+.nw-progress {
+  height: 8px;
+  background: var(--cream-200);
+  border-radius: 99px;
+  overflow: hidden;
+}
+
+.nw-progress i {
+  display: block;
+  height: 100%;
+  background: linear-gradient(90deg, var(--forest-700), var(--gold-500));
+  border-radius: inherit;
+}
