@@ -1,0 +1,18 @@
+.nw-empty {
+  display: grid;
+  justify-items: center;
+  gap: 8px;
+  padding: 48px 24px;
+  text-align: center;
+  color: var(--ink-500);
+}
+
+.nw-empty h3 {
+  font-family: var(--font-display);
+  font-size: 28px;
+  color: var(--ink-900);
+}
+
+.nw-empty p {
+  max-width: 360px;
+}
