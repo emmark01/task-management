@@ -1,0 +1,19 @@
+.nw-settings {
+  display: grid;
+  gap: 24px;
+  max-width: 560px;
+}
+
+.nw-settings section {
+  display: grid;
+  gap: 12px;
+  background: var(--white);
+  border: 1px solid var(--cream-300);
+  border-radius: 18px;
+  padding: 20px;
+}
+
+.nw-settings h2 {
+  font-family: var(--font-display);
+  font-size: 26px;
+}
