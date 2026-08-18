@@ -1,0 +1,37 @@
+.nw-task-list {
+  display: grid;
+  gap: 8px;
+}
+
+.nw-task-row {
+  display: grid;
+  grid-template-columns: 28px minmax(0, 1fr) auto auto auto;
+  gap: 12px;
+  align-items: center;
+  background: var(--white);
+  border: 1px solid var(--cream-300);
+  border-radius: 14px;
+  padding: 12px 14px;
+}
+
+.nw-task-row button {
+  background: none;
+  border: 0;
+  text-align: left;
+  padding: 0;
+}
+
+.nw-task-row h3 {
+  font-size: 15px;
+}
+
+.nw-task-row p {
+  color: var(--ink-500);
+  font-size: 13px;
+}
+
+@media (max-width: 800px) {
+  .nw-task-row {
+    grid-template-columns: 28px 1fr;
+  }
+}
