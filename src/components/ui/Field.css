@@ -1,0 +1,31 @@
+.nw-field {
+  display: grid;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--ink-700);
+}
+
+.nw-input,
+.nw-textarea,
+.nw-select {
+  width: 100%;
+  border: 1px solid var(--cream-300);
+  background: var(--white);
+  border-radius: 12px;
+  padding: 10px 12px;
+  color: var(--ink-900);
+  outline: none;
+}
+
+.nw-input:focus,
+.nw-textarea:focus,
+.nw-select:focus {
+  border-color: var(--forest-700);
+  box-shadow: 0 0 0 3px rgba(61, 107, 79, 0.15);
+}
+
+.nw-textarea {
+  min-height: 96px;
+  resize: vertical;
+}
