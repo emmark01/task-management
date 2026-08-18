@@ -1,0 +1,39 @@
+.nw-header {
+  min-height: var(--header-height);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 8px 0 24px;
+}
+
+.nw-header h1 {
+  font-family: var(--font-display);
+  font-size: 40px;
+  line-height: 1.1;
+}
+
+.nw-kicker {
+  font-size: 12px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--ink-500);
+  font-weight: 700;
+}
+
+.nw-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.nw-header-bell {
+  position: relative;
+}
+
+@media (max-width: 800px) {
+  .nw-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
