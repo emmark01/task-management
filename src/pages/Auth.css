@@ -1,0 +1,55 @@
+.nw-auth {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: minmax(320px, 480px) 1fr;
+}
+
+.nw-auth-panel {
+  padding: 48px;
+  background: var(--cream-50);
+  display: grid;
+  align-content: center;
+  gap: 16px;
+}
+
+.nw-auth h1 {
+  font-family: var(--font-display);
+  font-size: 42px;
+}
+
+.nw-auth form {
+  display: grid;
+  gap: 12px;
+}
+
+.nw-auth a {
+  color: var(--rust-600);
+  font-weight: 700;
+}
+
+.nw-auth aside {
+  background:
+    linear-gradient(160deg, rgba(31, 58, 46, 0.92), rgba(19, 36, 28, 0.8)),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80'%3E%3Cpath d='M0 80 L40 10 L80 80' fill='none' stroke='%23c4a35a' stroke-width='1.2' opacity='.25'/%3E%3C/svg%3E");
+  color: var(--cream-100);
+  display: grid;
+  place-content: center;
+  padding: 48px;
+}
+
+.nw-auth blockquote {
+  font-family: var(--font-display);
+  font-size: 36px;
+  max-width: 14ch;
+  margin: 0 0 12px;
+}
+
+@media (max-width: 800px) {
+  .nw-auth {
+    grid-template-columns: 1fr;
+  }
+
+  .nw-auth aside {
+    display: none;
+  }
+}
