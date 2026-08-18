@@ -1,0 +1,19 @@
+.nw-not-found {
+  min-height: 100vh;
+  display: grid;
+  place-content: center;
+  justify-items: center;
+  gap: 12px;
+  text-align: center;
+}
+
+.nw-not-found p {
+  letter-spacing: 0.2em;
+  font-weight: 700;
+  color: var(--rust-600);
+}
+
+.nw-not-found h1 {
+  font-family: var(--font-display);
+  font-size: 48px;
+}
