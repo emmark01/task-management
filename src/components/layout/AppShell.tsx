@@ -1,6 +1,7 @@
 import type { ReactNode } from "react";
 import { Sidebar } from "./Sidebar";
 import { Header } from "./Header";
+import { MobileNav } from "./MobileNav";
 import "./AppShell.css";
 
 interface AppShellProps {
@@ -16,6 +17,7 @@ export function AppShell({ title, kicker, children }: AppShellProps) {
       <div className="nw-main">
         <Header title={title} kicker={kicker} />
         {children}
+        <MobileNav />
       </div>
     </div>
   );
